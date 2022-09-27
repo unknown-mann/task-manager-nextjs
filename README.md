@@ -1,35 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task manager
 
-## Getting Started
+Проект был сконфигурирован при помощи шаблона `create next-app --typescript`
 
-First, run the development server:
+Приложение адаптировано только под desktop
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cтэк:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+* `TypeScript`
+* `React`
+* `Next.js`
+* `Mongo DB`
+* `Redux Query`
+* `Styled Components`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Описание проекта
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Представляю вашему вниманию Full-stack приложение с авторизацией, подключенной БД, умеющее выполнять CRUD операции.
 
-## Learn More
+### Главная страница
 
-To learn more about Next.js, take a look at the following resources:
+При запуске приложения вы попадете на главную страницу со списком всех задач (за исключением тех, что находятся в архиве), отсортированных по умолчанию. Вы можете переключаться между разными категориями задач и фильтровать их по дате:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img width="1440" alt="Screen Shot 2022-07-05 at 18 03 58" src="https://user-images.githubusercontent.com/99764749/177323301-8cfa49b7-5217-48a8-a290-bfe625d610f2.png">
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Карточка задачи
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Если дэдлайн задачи истек, то задача будет подсвечиваться красным и цвет даты также сменится на красный.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# task-manager-nextjs
+В интерфейсе карточки задачи при наведении курсора мыши доступны следующие функции:
+* При клике на ADD FAV или DEL FAV происходит добавление или удаление задачи в списке FAVORITES;
+* При клике на ARCHIVE или UNARCHIVE происходит добавление или удаление задачи в списке ARCHIVE (при добавлении задачи в ARCHIVE, задача исчезает из всех списков кроме ARCHIVE);
+* При наличии даты дэдлайна задачи, соответствующая дата будет отображена в левом нижнем углу карточки вне зависимости от того наведен курсор или нет, при налчии повторяющихся дней задачи, соответствующие дни будут отображены только при наведении курсора;
+* При клике на кнопку DELETE задача будет удалена из всех списков.
+
+<img width="1440" alt="Screen Shot 2022-07-05 at 18 26 31" src="https://user-images.githubusercontent.com/99764749/177327189-561bd71e-9096-4adb-af8c-7dcb679672c2.png">
+
+
+### Добавление новой задачи
+
+При клике на +ADD NEW TASK откроется модальное окно с возможностью добавить новую задачу. Выберите понравившийся вам цвет задачи, описание и дату дэдлайна задачи, либо, если желаете, чтобы задача повторялась, можете выбрать соответствующие дни недели (в зависимости от выбора типа задачи, верхний бар будет иметь соответствующий стиль: при выборе даты дэдлайна бар будет сплошным, при выборе повторяющихся дней недели - пунктирным). Задача не может быть сохранена без выбора одного из типа даты. После нажатия на кнопку сохранить, новая задача будет добавлена в конец списка:
+
+<img width="406" alt="Screen Shot 2022-07-05 at 18 10 18" src="https://user-images.githubusercontent.com/99764749/177325846-a4a5d049-5133-421e-997b-8d32ed2a62a1.png">
+
+
+### Редактирование существующей задачи
+
+При клике на кнопку EDIT в карточке задачи вам откроется модальное окно с возможностью редактировать выбранную задачу, принцип такой же как при добавлении новой задачи, только начальные данные заполняются исходя из выбранной задачи:
+
+<img width="389" alt="Screen Shot 2022-07-05 at 18 24 25" src="https://user-images.githubusercontent.com/99764749/177326828-368a5b40-9b4c-4cfc-b335-40550e77dce2.png">
