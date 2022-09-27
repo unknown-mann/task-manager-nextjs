@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import toast from "react-hot-toast";
+import { motion } from "framer-motion";
 import Modal from "./Modal";
 import { COLORS, IS_REPEATING_DAYS, MODAL_VARIANTS } from "../utils/const";
 import { isTaskRepeating } from "../utils";
