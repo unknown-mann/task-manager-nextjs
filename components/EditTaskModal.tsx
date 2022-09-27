@@ -159,7 +159,7 @@ const UpdateTaskModal: React.FC<ModalProps> = ({ task, setTask, setModalOpen }) 
 
   const [taskColor, setTaskColor] = useState(task.color);
   const [description, setDescription] = useState(task.description);
-  const [date, setDate] = useState(task.dueDate);
+  const [date, setDate] = useState(task.dueDate ? task.dueDate : "");
   const [repeatingDays, setRepeatingDays] = useState(task.repeatingDays);
 
   const [isDate, setIsDate] = useState(Boolean(task.dueDate));
