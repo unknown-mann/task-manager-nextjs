@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://localhost:3000/'
+// export const BASE_URL = 'http://localhost:3000/'
+export const BASE_URL = 'https://task-manager-nextjs.vercel.app/'
 
 export const SORT_VALUES = [
     {
