@@ -1,0 +1,33 @@
+{
+  "name": "task-manager-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
+    "framer-motion": "^7.3.6",
+    "mongoose": "^6.6.1",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-query": "^3.39.2",
+    "react-spinners": "^0.13.4",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
+    "@types/react-dom": "18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1",
+    "typescript": "4.8.3"
+  }
+}
