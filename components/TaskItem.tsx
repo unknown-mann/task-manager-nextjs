@@ -28,28 +28,6 @@ const TaskContent = styled.div<{ isExpired: boolean }>`
     box-shadow: ${props => props.isExpired ? '0 2px 38px 0 rgba(240, 0, 0, 0.19)' : '0 9px 38px 0 rgb(0 17 45 / 12%)'};
     background-color: #ffffff;
     outline: 0;
-    /* :hover {
-        outline: 10px solid white;
-        transition: outline-width 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        box-shadow: ${props => props.isExpired
-        ?
-        '0 -14px 38px 0 rgba(240, 0, 0, 0.19), 0 14px 38px 0 rgba(240, 0, 0, 0.19);'
-        :
-        '0 -14px 38px 0 rgba(35, 113, 245, 0.07), 0 14px 38px 0 rgba(35, 113, 245, 0.07);'};
-        z-index: 1;
-        button {
-            opacity: 1;
-            :hover {
-                opacity: 0.7;
-            };
-            :active {
-                opacity: 0.5;
-            }
-        }
-        div {
-            opacity: 1;
-        }
-    } */
     :hover {
         button {
             opacity: 1;

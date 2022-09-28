@@ -9,6 +9,10 @@ import { isTaskExpiringToday, isTaskActiveToday, isTaskExpired, isTaskRepeating 
 const HeaderEl = styled.header`
     padding: 0 8rem;
     padding-top: 40px;
+    @media (max-width: 768px) {
+        padding: 0 4rem;
+        padding-top: 40px;
+    }
 `;
 
 const Wrapper = styled.div`
